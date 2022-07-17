@@ -3,10 +3,9 @@
   <head>
     <link rel="stylesheet" href="css/style.css" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Cormorant+Garamond:wght@300&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Tenor+Sans&display=swap" rel="stylesheet">
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -70,7 +69,7 @@
 
        <main class="main">
         
-          <section class="section__tabcontent about__me">
+          <!--   <section class="section__tabcontent about__me">
             <div class="section__tabcontent__container about__me__container">
               
               <h3 class="section__tabcontent__name">Про Мене</h3>
@@ -95,7 +94,7 @@
                 </div>
   
                 <div class="section__tabcontent__image about__me__image">
-                  <img src="img/content__picture/aboutme.jpg" alt="About me">
+                  <img src="img/about__me/aboutme.jpg" alt="About me">
                 </div>
               </div>
               
@@ -124,9 +123,9 @@
               </div>
             </div>
             
-          </section>
+          </section> -->  
 
-          <section class="section__tabcontent">
+           <section class="section__tabcontent services">
             <div class="section__tabcontent__container">
               <h3 class="section__tabcontent__name">
                 Мої послуги
@@ -135,42 +134,27 @@
                 Вибери, що потрібно саме тобі:
               </h2>
              
-              <div class="section__tabcontent__body">
+              <div class="section__tabcontent__body services__body">
 
-                <div class="services__container">
-                  <div class="service">
+                  <div class="service service__1">
                     <div class="service__title__container">
-                      <image>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          xmlns:xlink="http://www.w3.org/1999/xlink"
-                          width="99.801"
-                          height="99.777"
-                          viewBox="0 0 4124 4123"
-                        >
-                          <image
-                            id="Фон_копія"
-                            data-name="Фон копія"
-                            x="258"
-                            y="429"
-                            width="3607"
-                            height="3464"
-                            xlink:href="data:img/png;base64,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"
-                          />
-                        </svg>
-                      </image>
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="99.996" height="99.996" viewBox="0 0 156 156">
+                        <image id="Шар_1_копія" data-name="Шар 1 копія" x="14" y="20" width="128" height="124" xlink:href="data:img/png;base64,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"/>
+                      </svg>
                       <h3 class="service__title right__slide">
                         Консультація по стилю
                       </h3>
                     </div>
+                    
+                    <div class="text__block">
+                      Консультація- це перший крок на шляху до змін вашого стилю!
+                    </div>
+                    <div class="section__tabcontent__image">
+                      <img src="img/services/(14).JPG" alt="" />
+                    </div>
+
       
-                    <figure class="descr__card">
-                      <p class="client__need">
-                        Консультація- це перший крок на шляху до змін вашого стилю!
-                      </p>
-                      <img class="content__picture" src="img/al5.JPG" alt="" />
-      
-                      <figcaption class="descr__text">
+                      <div class="section__tabcontent__content">
                         <ul class="service__components__list">
                           <li class="service__components__list__title">
                             Консультація по стилю включає:
@@ -188,9 +172,9 @@
                             підходять саме вам;
                           </li>
                         </ul>
-                      </figcaption>
-                    </figure>
-      
+                      </div>
+                        
+                
                     <div class="service__details">
                       <p class="text__block">
                         Також під час консультації ви зможете задати усі питання, які
@@ -217,7 +201,7 @@
                     </div>
                   </div>
       
-                  <div class="service">
+                  <div class="service service__2">
                     <div class="service__title__container">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -240,7 +224,7 @@
                     </div>
       
                     <figure class="descr__card">
-                      <p class="client__need">
+                      <p class="text__block">
                         Якщо ви втомились від свого гардеробу, постійно вдягаєте одне
                         і те саме, не бачите ніяких цікавих комплектів в гардеробі, а
                         деякі речі ще досі лежать з бірками, тоді ця послуга для вас!
@@ -316,7 +300,7 @@
                     </div>
                   </div>
       
-                  <div class="service">
+                  <div class="service service__3">
                     <div class="service__title__container">
                       <image>
                         <svg
@@ -341,7 +325,7 @@
                     </div>
       
                     <figure class="descr__card">
-                      <p class="client__need">
+                      <p class="text__block">
                         Шопінг-супровід допоможе позбавитись проблеми імпульсивних і
                         непотрібних покупок і зібрати гардероб, який буде працювати на
                         всі 100%.
@@ -385,7 +369,7 @@
                     </div>
                   </div>
       
-                  <div class="service">
+                  <div class="service service__4">
                     <div class="service__title__container">
                       <image>
                         <svg
@@ -410,7 +394,7 @@
                     </div>
       
                     <figure class="descr__card">
-                      <p class="client__need">
+                      <p class="text__block">
                         Капсульний гардероб – просто знахідка, для тих хто мріє бути
                         зібраним за п’ять хвилин. Це гардероб, в якому всі і кожна річ
                         поєднуються між собою.
@@ -469,14 +453,14 @@
                     </div>
                   </div>
       
-                  <div class="service">
+                  <div class="service service__5">
                     <h3 class="service__title right__slide">
                       Розбір гардеробу
                       <span class="badge bg-secondary"> онлайн</span>
                     </h3>
       
                     <figure class="descr__card">
-                      <p class="client__need">
+                      <p class="text__block">
                         Для роботи зі стилістом немає меж на кордонів, а ефективність
                         роботи така ж висока як і при живому спілкуванні.
                       </p>
@@ -536,13 +520,13 @@
                     </div>
                   </div>
       
-                  <div class="service">
+                  <div class="service service__6">
                     <h3 class="service__title left__slide">
                       Шопінг-супровід<span class="badge bg-secondary"> онлайн</span>
                     </h3>
       
                     <figure class="descr__card">
-                      <p class="client__need">
+                      <p class="text__block">
                         Ви проживаєте в Європі, Америці, іншій точці світу і хотіли б
                         поповнити гардероб правильними речима? Шопінг зі стилістом
                         можливий не лише в форматі особистої зустрічі.
@@ -600,13 +584,13 @@
                     </div>
                   </div>
       
-                  <div class="service">
+                  <div class="service service__7">
                     <h3 class="service__title right__slide">
                       Створення образів після шопінгу
                     </h3>
       
                     <figure class="descr__card">
-                      <p class="client__need">
+                      <p class="text__block">
                         Після того як ми оновимо ваш гардероб пропоную створити образи
                         з новими речима та з тими, що вже є в гардеробі
                       </p>
@@ -637,7 +621,7 @@
                     </div>
                   </div>
       
-                  <div class="service">
+                  <div class="service service__8">
                     <h3 class="service__title left__slide">
                       Стиліст<span class="badge bg-secondary">онлайн</span>
                     </h3>
@@ -698,7 +682,7 @@
                     </div>
                   </div>
       
-                  <div class="service">
+                  <div class="service service__9">
                     <h3 class="service__title right__slide">
                       Індивідуальні, корпоративні послуги стиліста та співпраця
                     </h3>
@@ -778,7 +762,7 @@
                   </div>
       
                   <div class="services__list">
-                    <div class="service__item active__service">
+                    <div class="service__item active__service" >
                       <a class="service__button">Консультація</a>
                     </div>
       
@@ -828,12 +812,12 @@
                       >
                     </div>
                   </div>
-                </div>
+                
               </div>
             </div>
-          </section>
+          </section>   
 
-          <section class="section__tabcontent">
+          <section class="section__tabcontent personal__buyer__services">
             <div class="section__tabcontent__container">
               <h3 class="section__tabcontent__name">
                 Послуги персонального шопера
@@ -845,109 +829,109 @@
               </h2>
 
               <div class="section__tabcontent__body">
-                <ul class="service__components__list">
-                  <li class="service__components__list__title">
+                <ul class="service__components__list advantages__items__list">
+                  <li class="service__components__list__title advantages__list__title">
                     Переваги співпраці із персональним шопером
                   </li>
-                  <li class="service__component">
-                    <p class="question">Хто такий персональний шопер?</p>
-                    <p class="answer">
+                  <li class="service__component advantages__item">
+                    <div class="text__block question">Хто такий персональний шопер?</div>
+                    <div class="text__block answer">
                       Персональний шопер-це людина, яка займається пошуком речей для
                       вас, старається знайти позиції за найкращою ціною, дістати
                       неможливе з розряду sold out.
-                    </p>
+                    </div>
                   </li>
       
-                  <li class="service__component">
-                    <p class="question">
+                  <li class="service__component  advantages__item">
+                    <div class="text__block question">
                       Для чого звертатись до персонального шопера, якщо можна купити
                       річ самостійно?
-                    </p>
-                    <p class="answer">
+                    </div>
+                    <div class="text__block answer">
                       Звичайно, ви можете це зробити самостійно. Але, в бутіках, які є
                       в нас часто далеко не весь асортимент і ціни відрізняються в
                       багатьох випадках від європейських не в кращу сторону. Крім
                       того, новинки з’являються пізніше.
-                    </p>
+                    </div>
                   </li>
       
-                  <li class="service__component">
-                    <p class="question">З якими брендами я працюю?</p>
-                    <p class="answer">
+                  <li class="service__component advantages__item">
+                    <div class="text__block question">З якими брендами я працюю?</div>
+                    <div class="text__block answer">
                       Список дуже великий. Це бренди середнього та люкс-сегменту:
                       YSL,Prada,LV, Chanel,Bottega Veneta, Gucci, Fendi, Dior,
                       Valentino та багато інших.
-                    </p>
+                    </div>
                   </li>
                 </ul>
                 <div class="CTA__container">
                   <h3 class="CTA">Хочеш побачити актуальний ассортимент?</h3>
-                  <a class="CTA__button" href="https://t.me/stoliarova_alina">
+                  <a class="sign__up__button" href="https://t.me/stoliarova_alina">
                     Підпишися на мій Telegram-канал!
                   </a>
                 </div>
       
-                <ul class="service__components__list">
-                  <li class="service__components__list__title">
+                <ul class="service__components__list advantages__items__list">
+                  <li class="service__components__list__title advantages__list__title">
                     Процес вибору та замовлення речі
                   </li>
-                  <li class="service__component">
-                    <p class="question">Як вибрати річ?</p>
-                    <p class="answer">
+                  <li class="service__component advantages__item">
+                    <div class="text__block question">Як вибрати річ?</div>
+                    <div class="text__block answer">
                       Ви можете вибирати з того, що я показую тут або ж надсилати фото
                       бажаної речі в приватні повідомлення @alinastoliarova і я
                       постараюсь знайти її якнайшвидше для вас.
-                    </p>
+                    </div>
                   </li>
       
-                  <li class="service__component">
-                    <p class="question">Як дізнатись ціну?</p>
-                    <p class="answer">
+                  <li class="service__component  advantages__item">
+                    <div class="text__block question">Як дізнатись ціну?</div>
+                    <div class="text__block answer">
                       Ви можете дізнатись ціну в моєму телеграм каналі або написавши
                       особисто. Співпраця з бутіками дає мені можливість пропонувати
                       ціни такі ж як ви бачите на офіційному сайті бренду, а інколи і
                       дешевше.
-                    </p>
+                    </div>
                   </li>
-                  <li class="service__component">
-                    <p class="question">Оплата/Передоплата</p>
-                    <p class="answer">
+                  <li class="service__component advantages__item">
+                    <div class="text__block question">Оплата/Передоплата</div>
+                    <div class="text__block answer">
                       Річ викупляється лише зі 100% передоплатою.
-                    </p>
+                    </div>
                   </li>
-                  <li class="service__component">
-                    <p class="question">Комісія</p>
-                    <p class="answer">
+                  <li class="service__component advantages__item">
+                    <div class="text__block question">Комісія</div>
+                    <div class="text__block answer">
                       На товари брендів LV, Chanel, Hermès буде додаткова комісія в
                       розмірі 10% від ціни товару.
-                    </p>
+                    </div>
                   </li>
-                  <li class="service__component">
-                    <p class="question">Доставка</p>
-                    <p class="answer">
+                  <li class="service__component advantages__item">
+                    <div class="text__block question">Доставка</div>
+                    <div class="text__block answer">
                       Доставка в Україну ~ 25Є. Термін доставки з Європи в Україну
                       10-14 робочих днів. Інколи бувають довші терміни через
                       форс-мажорні обставини (наприклад, затримки на кордонах), на які
                       ми не можемо вплинути.
-                    </p>
+                    </div>
                   </li>
-                  <li class="service__component">
-                    <p class="question">Податок</p>
-                    <p class="answer">
+                  <li class="service__component  advantages__item">
+                    <div class="text__block question">Податок</div>
+                    <div class="text__block answer">
                       Додатково нічого оплачувати НЕ ПОТРІБНО.
-                    </p>
+                    </div>
                   </li>
                 </ul>
       
                 <div class="service__details">
-                  <p class="client__need">
+                  <p class="text__block text__block">
                     Також, я з радістю створю для вас підбірку речей за заданими
                     параметрами (форма, колір, ціна, розмір і т.д.)
                   </p>
                 </div>
               </div>
             </div>
-          </section>
+          </section> 
 
           <section class="section__tabcontent">
             <div class="section__tabcontent__container">
@@ -1174,9 +1158,9 @@
                 </ul>
               </div>
             </div>
-          </section>
+          </section> 
 
-          <section class="section__tabcontent">
+           <section class="section__tabcontent">
             <div class="section__tabcontent__container">
               <h3 class="section__tabcontent__name">
                 Робота з клієнтами в Європі
@@ -1200,7 +1184,7 @@
       
                 <div class="CTA__container">
                   <h3 class="CTA">Хочеш дізнатися більше?</h3>
-                  <form method="get">
+                  <form class="CTA__form" method="get">
                     <label for="message">що тебе цікавить?:)</label>
                     <textarea
                       class="message"
@@ -1210,13 +1194,14 @@
                       placeholder="що тебе цікавить?:)"
                     >
                     </textarea>
+                    <input class="send__message__button" type="submit" value="Відправити" />
                   </form>
                 </div>
               </div>
             </div>
           </section>
 
-          <section class="section__tabcontent">
+          <section class="section__tabcontent gift__cards">
             <div class="section__tabcontent__container">
               <h3 class="section__tabcontent__name">
                 Подарункові сертифікати
@@ -1226,29 +1211,29 @@
               </h2>
 
               <div class="section__tabcontent__body">
-                <figure class="descr__card">
-                  <figcaption class="descr__text">
-                    <p class="text__block">
-                      Подарунковий сертифікат вам в цьому допоможе!
-                    </p>
-                    <p class="text__block">
-                      Скористайтесь можливістю подарувати приємні емоції вашим рідним
-                      та близьким.
-                    </p>
-                  </figcaption>
-                  <div class="gift__card__container">
+                <div class="section__tabcontent__content">
+                  <p class="text__block">
+                    Подарунковий сертифікат вам в цьому допоможе!
+                  </p>
+                   
+                  <div class="section__tabcontent__image">
                     <img
                       class="content__picture"
-                      src="img/gift__card__frontside.png"
+                      src="img/gift__cards/gift__card__frontside.png"
                       alt="#"
                     />
                     <img
                       class="content__picture"
-                      src="img/gift__card__backside.png"
+                      src="img/gift__cards/gift__card__backside.png"
                       alt="#"
                     />
                   </div>
-                </figure>
+           
+                  <p class="text__block">
+                    Скористайтесь можливістю подарувати приємні емоції вашим рідним
+                    та близьким.
+                  </p>
+                </div>
       
                 <div class="service__details">
                   <p class="text__block">
@@ -1285,7 +1270,7 @@
               </h2>
 
               <div class="section__tabcontent__body">
-                <p class="client__need">
+                <p class="text__block">
                   Робота зі стилістом - це захоплюючий процес, в результаті якого ви
                   знайдете свій унікальний стиль.
                 </p>
@@ -1527,7 +1512,7 @@
                 </ul>
               </div>
             </div>
-          </section>
+          </section>  
 
       </main> 
 

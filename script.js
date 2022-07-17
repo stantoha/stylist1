@@ -8,7 +8,14 @@ window.addEventListener('DOMContentLoaded', () => {
         navMenuButton = document.getElementById('nav__toggle'),
         navButton=document.querySelector('.nav__btn'),
         tabs = document.querySelectorAll('.header__nav__menu__link'),
-        tabsContent=document.querySelectorAll('.section__tabcontent');
+        tabsContent=document.querySelectorAll('.section__tabcontent'),
+        serviceTabs = document.querySelectorAll('.service__button'),
+        servicesTabsContent = document.querySelectorAll('.service'),
+        servicesTabParent = document.querySelector('.services__list'),
+        upButton = document.querySelector('.up__button'),
+        sectionTitles = document.querySelectorAll('.section__title'),
+        serviceTitles = document.querySelectorAll('.service__title'),
+        subTitle = document.querySelector('.sub__title');
 
         function showNavMenu(){
             navMenu.classList.remove('header__nav__menu');
@@ -34,12 +41,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     
-  /*   upButton.classList.add('hide'); */
+    upButton.classList.add('hide');
 
     setTimeout(() => {
         title.classList.remove('top__slide');
-       /*  subTitle.classList.remove('hide');
-        subTitle.classList.add('show', 'fade'); */
+        subTitle.classList.remove('hide');
+        subTitle.classList.add('show', 'fade'); 
     }, 1000);
 
 
@@ -58,7 +65,7 @@ window.addEventListener('DOMContentLoaded', () => {
         tabsContent[i].classList.remove('hide');
         tabs[i].classList.add('active');
 
-       /*  if (sectionTitles[i].classList.contains('right__slide')) {
+         if (sectionTitles[i].classList.contains('right__slide')) {
             setTimeout(() => {
                 sectionTitles[i].classList.remove('right__slide');
             }, 1000);
@@ -66,13 +73,13 @@ window.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 sectionTitles[i].classList.remove('left__slide');
             }, 1000);
-        } */
+        } 
     }
 
     hideTabContent();
     showTabContent();
 
-    /* function hideServiceTabContent() {
+     function hideServiceTabContent() {
         servicesTabsContent.forEach(item => {
             item.classList.add('hide');
             item.classList.remove('show', 'fade');
@@ -89,7 +96,7 @@ window.addEventListener('DOMContentLoaded', () => {
         serviceTabs[j].parentElement.classList.add('active__service');
     }
 
-    hideServiceTabContent(); */
+    hideServiceTabContent(); 
 
     navMenu.addEventListener('click', (event) => {
         let target = event.target;
@@ -103,13 +110,13 @@ window.addEventListener('DOMContentLoaded', () => {
                         hideNavMenu();
                     }
                     
-                    /* if (i == 1) {
+                     if (i == 1) {
                         setTimeout(() => {
                             serviceTitles[0].classList.remove('right__slide');
                         }, 1000);
                         showServiceTabContent();
                      
-                        servicesnavMenu.addEventListener('click', (event) => {
+                        servicesTabParent.addEventListener('click', (event) => {
                             let target = event.target;
                             if (target && target.classList.contains('service__button')) {
                                 
@@ -118,7 +125,7 @@ window.addEventListener('DOMContentLoaded', () => {
                                         hideServiceTabContent();
                                         showServiceTabContent(j);
 
-                                        serviceTitles.forEach(item => {
+                                        /* serviceTitles.forEach(item => {
                                             if (serviceTitles[j].classList.contains('right__slide')) {
                                                 setTimeout(() => {
                                                     serviceTitles[j].classList.remove('right__slide');
@@ -128,13 +135,13 @@ window.addEventListener('DOMContentLoaded', () => {
                                                     serviceTitles[j].classList.remove('left__slide');
                                                 }, 1000);
                                             }
-                                        });
+                                        }); */
 
                                     }
                                 });
                             }
                         });
-                    } */
+                    } 
                 }
             });
         }
