@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', () => {
         navMenuButton = document.getElementById('nav__toggle'),
         navButton=document.querySelector('.nav__btn'),
         tabs = document.querySelectorAll('.header__nav__menu__link'),
-        tabsContent=document.querySelectorAll('.section__tabcontent'),
+        tabsContent=document.querySelectorAll('.section'),
         serviceTabs = document.querySelectorAll('.service__button'),
         servicesTabsContent = document.querySelectorAll('.service'),
         servicesTabParent = document.querySelector('.services__list'),
@@ -16,6 +16,13 @@ window.addEventListener('DOMContentLoaded', () => {
         sectionTitles = document.querySelectorAll('.section__title'),
         serviceTitles = document.querySelectorAll('.service__title'),
         subTitle = document.querySelector('.sub__title');
+
+
+        console.log(tabs);
+
+console.log(tabsContent);
+
+
 
         function showNavMenu(){
             navMenu.classList.remove('header__nav__menu');
@@ -41,13 +48,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     
-    upButton.classList.add('hide');
+    /* upButton.classList.add('hide'); */
 
     setTimeout(() => {
         title.classList.remove('top__slide');
         subTitle.classList.remove('hide');
         subTitle.classList.add('show', 'fade'); 
     }, 1000);
+
+
 
 
     function hideTabContent() {
