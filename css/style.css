@@ -116,6 +116,7 @@ body{
 .header__logo {
   flex: 0 0 70px;
   z-index: 5;
+  height: 70px;
 }
 
 .header__logo__icon{
@@ -553,7 +554,7 @@ a:hover.service__button{
   background-color:rgba(0, 0, 0, 0.2);
   text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
   padding: 25px;
-  margin: 0 auto;
+ 
 }
 
 .service__9 .service__component,
@@ -569,6 +570,7 @@ a:hover.service__button{
 .service__pack .service__components__list__title,
 .service__pack .service__component{
   flex: 1 1 100%;
+  margin: 0 auto;
   }
 /* rgba(170, 115, 84, 1)
 
