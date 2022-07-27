@@ -94,7 +94,7 @@ body{
 
 
 .header {
-  position: fixed;
+  position: absolute;
   width: 100vw;
   top: 5px;
   left: 0;
