@@ -95,7 +95,7 @@ body{
 
 .header {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   top: 5px;
   left: 0;
   z-index: 50;
@@ -103,6 +103,7 @@ body{
 }
 
 .header__container {
+  
   display: flex;
   height: 100px;
   align-items: center;
