@@ -114,7 +114,7 @@ body{
 }
 
 .header__logo {
-  flex: 0 0 90px;
+  flex: 0 1 90px;
   z-index: 5;
 }
 
