@@ -95,7 +95,7 @@ body{
 
 .header {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   top: 5px;
   left: 0;
   z-index: 50;
@@ -368,7 +368,7 @@ height: auto;
 }
 
 .section__image img{
-  max-width: 480px;
+  max-width: 400px;
   margin: 0 auto;
 }
 
@@ -682,6 +682,18 @@ rgba(255, 249, 239, 1) */
   .service__image,
   .service__content{
     flex: 1 1 100%;
+  }
+
+  .section__content,
+  .service__content,
+  .section__image,
+  .service__image{
+    padding: 0;
+  }
+  .section__image img,
+  .service__image img{
+    max-width: 320px;
+    
   }
 }
 
