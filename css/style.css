@@ -95,15 +95,16 @@ body{
 
 .header {
   position: fixed;
- /*  width: 100vw; */
+  width: 100vw;
   top: 5px;
   left: 0;
   z-index: 50;
   background-color: rgba(225, 191, 179, 0.8);
+  margin: 0 auto;
 }
 
 .header__container {
-  width: 100%;
+  width:auto;
   display: flex;
   height: 100px;
   align-items: center;
