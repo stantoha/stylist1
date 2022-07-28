@@ -295,24 +295,23 @@ rgba(255, 249, 239, 1) */
   }
 
 }
+
+
+
+/*______________________________________________*/
+
+
 .main {
   flex: 1 1 auto;
   padding-top: 110px;
 }
 
-.main__container{
- 
-}
 .section {
-  
-/*   background-color:rgba(0, 0, 0, 0.1); */
-}
 
+}
 .section:nth-of-type(2n){
- /*  background-color:rgba(0, 0, 0, 0.2); */
 
 }
-
 .title-section {
  display: flex;
  align-items:center;
@@ -323,7 +322,6 @@ height: auto;
   flex: 0 0 100%;
   display: inline-block;
   padding: 10px;
- /*  height: auto; */
 }
 .section__title {
   font-style: italic;
@@ -337,21 +335,18 @@ height: auto;
   color: rgba(170, 115, 84, 1);
  margin: 0 auto;
 }
-
 .section__body {
- width: 100%;
-
+  width: 100%;
 }
-
 .body-section{
   display: flex;
-  width: 100%;
+
   height: auto;
   flex-wrap: wrap;
   align-items:center;
 }
 .section__content {
-  flex: 0 1 50%;
+  flex: 1 1 50%;
   padding: 30px;
 }
 .text__block {
@@ -364,7 +359,7 @@ height: auto;
 .text__block__text {
 }
 .section__image {
-  flex: 0 1 50%;
+  flex: 1 1 50%;
   padding: 30px;
   text-align: center;
 }
@@ -374,10 +369,38 @@ height: auto;
   margin: 0 auto;
 }
 
+.section__details {
+  flex: 1 1 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  align-items:center;
+}
+.section__duration {
+}
+.section__online__possibility {
+}
+.section__details table{
+  border-collapse: collapse;
+  margin: 30px auto;
+}
+.section__details td{
+  padding: 30px;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-align: center;
+  border:1px solid rgba(170, 115, 84, 1);
+}
 
-
-
-
+.section__details .text__block{
+  font-family: 'Tenor Sans', sans-serif;
+  color:rgba(231, 161, 125, 1);
+  background-color:rgba(0, 0, 0, 0.1);
+  font-size: 1.5em;
+  font-style: italic;
+  padding:30px 60px ;
+}
 
 
 
@@ -398,12 +421,8 @@ height: auto;
 .service {
   flex: 1 1 auto;
   display: flex;
-/*   background-color:rgba(255, 255, 255, 0.5); */
 }
 
-/* .service:nth-of-type(2n){
-  background-color:rgba(255, 255, 255, 0.1);
-} */
 .service__1 {
 }
 .service__title__container {
@@ -457,7 +476,6 @@ background-color: rgba(0,0,0,0.1);
 .service__item {
   flex:0 1 auto;
   border-radius:15px/15px;
-/*   justify-self:baseline; */
   display:inline-flex;
   justify-content: center;
   align-items:baseline;
@@ -465,6 +483,7 @@ background-color: rgba(0,0,0,0.1);
   height: 40px;
   padding: 5px;
   padding-top: 10px;
+  color: rgba(0,0,0,1);
    box-shadow:0 0 2px rgba(0, 0, 0, 0.4);
   background-color:rgba(252, 230, 209, 1);
 }
@@ -473,10 +492,11 @@ background-color: rgba(0,0,0,0.1);
   margin-right: 10px;
 }
 .active__service {
-  color:rgba(231, 161, 125, 1);
+  background-color:rgba(231, 161, 125, 1);
   font-weight: 800;
   line-height: 1.2;
-  box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
+  color:rgba(255, 255, 255, 1);
+  box-shadow:0 0 4px rgba(0, 0, 0, 0.8);
 }
 .service__button {
   font-size: 0.9em;
@@ -487,9 +507,9 @@ a:hover.service__button{
 }
 .badge {
   font-size: 0.9em;
-  font-weight: 500;
+  font-weight: 700;
   padding: 5px;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(170, 115, 84, 1);
 }
 .body-service {
   display: flex;
@@ -693,7 +713,7 @@ rgba(255, 249, 239, 1) */
   .service__content,
   .section__image,
   .service__image{
-    padding: 0;
+    padding:20px 0;
   }
   .section__image img,
   .service__image img{
@@ -746,9 +766,52 @@ rgba(255, 249, 239, 1) */
 
 
 
+.advantages {
+}
+.advantages__container {
+}
 
 
+.advantages__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items:center;
+  gap: 25px;
+  margin-bottom: 50px;
+}
+.advantages__item {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+  min-height: 120px;
+  padding: 20px;
+  background-color:rgba(252, 230, 209, 1);
+}
+.advantages__item:nth-of-type(2n) {
+  background-color:rgba(225, 191, 179, 1);
+  }
+.advantage__icon {
+  flex: 0 1 100px;
+  height: 100px;
+}
+.advantages__item .text__block {
+  flex: 0 1 70%;
+  text-align: end;
+}
 
+.advantages__item:nth-of-type(2n)  .text__block {
+  flex: 0 1 70%;
+  text-align: start;
+}
+
+
+@media(max-width:479.98px){
+  .advantage__icon {
+    flex: 1 1 70px;
+    height: 70px;
+  }
+}
 
 
 
