@@ -120,8 +120,8 @@ body{
 .header__logo__icon{
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   border-radius:50%;
-  max-height: 90px;
-  width: 90px;
+  max-height: 70px;
+    width: 70px;
 }
 
 .header__title {
@@ -271,7 +271,7 @@ rgba(255, 249, 239, 1) */
 }
 @media (max-width:991.98px){
 
-  .title{
+  .header__title{
     flex:0 1 80%; 
   }
   .header__nav{
@@ -296,6 +296,21 @@ rgba(255, 249, 239, 1) */
 
 }
 
+@media(max-width:479.98px){
+  .header__title{
+    font-size: 1.7em;
+  }
+}
+
+@media(max-width:319.98px){
+  .header__logo__icon{
+    display: none;
+  }
+  .header__title{
+    font-size: 1.5em;
+  }
+}
+
 
 
 /*______________________________________________*/
@@ -312,20 +327,29 @@ rgba(255, 249, 239, 1) */
 .section:nth-of-type(2n){
 
 }
+
+.section__container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
 .title-section {
  display: flex;
  align-items:center;
 flex-wrap: wrap;
 height: auto;
+width: inherit;
 }
 .section__name {
-  flex: 0 0 100%;
+  flex: 1 1 auto;
   display: inline-block;
   padding: 10px;
 }
 .section__title {
   font-style: italic;
-  flex: 0 0 100%;
+  flex: 1 1 auto;
   max-width: 70%;
   font-size: 1.8em;
   text-align: center;
@@ -340,7 +364,7 @@ height: auto;
 }
 .body-section{
   display: flex;
-
+  width:fit-content ;
   height: auto;
   flex-wrap: wrap;
   align-items:center;
@@ -402,8 +426,24 @@ height: auto;
   padding:30px 60px ;
 }
 
+@media (max-width:1087.98px){
+
+  .section__content,
+  .section__image{
+    flex: 1 1 100%;
+  }
+
+  .section__content,
+  .section__image{
+    padding:20px 0;
+  }
+  .section__image img{
+    max-width: 480px;
+  }
+}
 
 
+/*______________________________________________*/
 
 
 .services {
@@ -422,6 +462,8 @@ height: auto;
   flex: 1 1 auto;
   display: flex;
 }
+
+
 
 .service__1 {
 }
@@ -629,7 +671,7 @@ rgba(255, 249, 239, 1) */
   font-style: italic;
   padding:30px 60px ;
 }
-
+/*______________________________________________*/
 
 .additional__services__list {
   flex: 1 1 auto;
@@ -721,6 +763,10 @@ rgba(255, 249, 239, 1) */
     
   }
 }
+
+/*______________________________________________*/
+
+
 
 
 .personal__buyer__services .section__content {
@@ -1148,6 +1194,24 @@ a.social__link:hover {
 
 
 /*______________________________________________*/
+
+
+@media(max-width:479.98px){
+  .body{
+    font-size:12px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 /* 
 .main {
 }
