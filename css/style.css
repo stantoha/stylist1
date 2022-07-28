@@ -47,6 +47,7 @@ body{
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  width: 100vw;
 }
 
 
@@ -99,7 +100,7 @@ body{
   left: 0;
   z-index: 50;
   background-color: rgba(225, 191, 179, 0.8);
-
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .header__container {
@@ -109,8 +110,10 @@ body{
   text-align: center;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   column-gap: 25px;
-  padding:5px  25px;
 }
+
+/*______________________________________________*/
+
 
 .header__logo {
   flex: 0 0 auto;
@@ -124,8 +127,13 @@ body{
     width: 70px;
 }
 
+
+/*______________________________________________*/
+
+
 .header__title {
   flex: 1 1 35%;
+  line-height: 1.4;
   font-weight: 600;
   letter-spacing: 2px;
   font-size: 1.8em;
@@ -138,13 +146,16 @@ body{
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   font-weight: 500;
   font-size: 0.7em;
-  
+  line-height: 1.4;
 }
+
+
+/*______________________________________________*/
+
 
 .header__nav {
   flex: 1 1 50%;
   display: flex;
-  
 }
 
 .header__nav__menu {
@@ -172,15 +183,7 @@ body{
   height: 100%;
   background-color:rgba(225, 191, 179, 1)
 }
-/* rgba(170, 115, 84, 1)
 
-rgba(231, 161, 125, 1)
-
-rgba(225, 191, 179, 1)
-
-rgba(252, 230, 209, 1)
-
-rgba(255, 249, 239, 1) */
 .nav__btn{
   display: none;
   position: relative;
@@ -189,9 +192,7 @@ rgba(255, 249, 239, 1) */
   cursor: pointer;
   z-index: 1;
   top: 0;
-
 }
-
 
 .header__nav__menu__item {
   color: rgba(255, 255, 255, 1);
@@ -211,7 +212,6 @@ rgba(255, 249, 239, 1) */
   color:rgba(231, 161, 125, 1);
   font-weight: 700;
 }
-
 
 .nav__btn > span,
 .nav__btn > span::before,
@@ -269,6 +269,11 @@ rgba(255, 249, 239, 1) */
   top: 0;
   transform: rotate(90deg);
 }
+
+/*______________________________________________*/
+
+
+
 @media (max-width:991.98px){
 
   .header__title{
@@ -312,8 +317,11 @@ rgba(255, 249, 239, 1) */
 }
 
 
+/*______________________________________________*/
 
 /*______________________________________________*/
+
+
 
 
 .main {
@@ -332,9 +340,13 @@ rgba(255, 249, 239, 1) */
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  position: relative;
   margin: 0 auto;
 }
+
+/*______________________________________________*/
+
+
 .title-section {
  display: flex;
  align-items:center;
@@ -345,6 +357,7 @@ width: inherit;
 .section__name {
   flex: 1 1 auto;
   display: inline-block;
+  text-align: start;
   padding: 10px;
 }
 .section__title {
@@ -359,6 +372,10 @@ width: inherit;
   color: rgba(170, 115, 84, 1);
  margin: 0 auto;
 }
+
+/*______________________________________________*/
+
+
 .section__body {
   width: 100%;
 }
@@ -373,6 +390,7 @@ width: inherit;
   flex: 1 1 50%;
   padding: 30px;
 }
+
 .text__block {
   display: inline-block;
   vertical-align: middle;
@@ -382,6 +400,36 @@ width: inherit;
 }
 .text__block__text {
 }
+
+.to__the__top {
+  transform: translateY(-7vh);
+}
+
+.top__slide {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.left__slide {
+  opacity: 0;
+  transform: translateX(-200%);
+}
+
+.right__slide {
+  opacity: 0;
+  transform: translateX(200%);
+}
+.client__need {
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 1.8em;
+  text-align: center;
+  color: rgba(231, 161, 125, 1);
+  font-family: 'Tenor Sans', sans-serif;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+}
+
 .section__image {
   flex: 1 1 50%;
   padding: 30px;
@@ -392,6 +440,8 @@ width: inherit;
   max-width: 400px;
   margin: 0 auto;
 }
+
+/*______________________________________________*/
 
 .section__details {
   flex: 1 1 100%;
@@ -426,6 +476,10 @@ width: inherit;
   padding:30px 60px ;
 }
 
+
+/*______________________________________________*/
+
+
 @media (max-width:1087.98px){
 
   .section__content,
@@ -458,16 +512,17 @@ width: inherit;
   flex: 1 1 45%;
 }
 
+/*______________________________________________*/
+
+
 .service {
   flex: 1 1 auto;
   display: flex;
 }
 
-
-
 .service__1 {
 }
-.service__title__container {
+.service__title__box {
   display: flex;
   justify-content: center;
   align-items:center;
@@ -490,20 +545,9 @@ width: inherit;
   color:rgba(225, 191, 179, 1);
 }
 
+/*______________________________________________*/
 
 
-.right__slide {
-}
-.client__need {
-  font-weight: 600;
-  letter-spacing: 3px;
-  font-size: 1.8em;
-  text-align: center;
-  color: rgba(231, 161, 125, 1);
-  font-family: 'Tenor Sans', sans-serif;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
-  padding: 20px;
-}
 
 .services__list {
   display: flex;
@@ -553,6 +597,10 @@ a:hover.service__button{
   padding: 5px;
   color: rgba(170, 115, 84, 1);
 }
+
+/*______________________________________________*/
+
+
 .body-service {
   display: flex;
   align-items:center;
@@ -576,6 +624,11 @@ a:hover.service__button{
   max-width: 450px;
   margin: 10px auto;
 }
+
+
+/*______________________________________________*/
+
+
 
 .service__components__list {
   display: flex;
@@ -612,8 +665,12 @@ a:hover.service__button{
   background-color:rgba(0, 0, 0, 0.2);
   text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
   padding: 25px;
- 
 }
+
+
+/*______________________________________________*/
+
+
 
 .service__9 .service__component,
 .service__9 .service__components__list__title{
@@ -629,15 +686,11 @@ a:hover.service__button{
   flex: 1 1 100%;
    margin: 0 auto;
   }
-/* rgba(170, 115, 84, 1)
 
-rgba(231, 161, 125, 1)
 
-rgba(225, 191, 179, 1)
+  /*______________________________________________*/
 
-rgba(252, 230, 209, 1)
 
-rgba(255, 249, 239, 1) */
 
 .service__details {
   flex: 1 1 100%;
@@ -671,7 +724,11 @@ rgba(255, 249, 239, 1) */
   font-style: italic;
   padding:30px 60px ;
 }
+
+
 /*______________________________________________*/
+
+
 
 .additional__services__list {
   flex: 1 1 auto;
@@ -775,7 +832,7 @@ rgba(255, 249, 239, 1) */
 
 
 
-
+/*______________________________________________*/
 
 
 
@@ -809,7 +866,7 @@ rgba(255, 249, 239, 1) */
 
 
 
-
+/*______________________________________________*/
 
 
 .advantages {
@@ -844,11 +901,15 @@ rgba(255, 249, 239, 1) */
 .advantages__item .text__block {
   flex: 0 1 70%;
   text-align: end;
+  font-size: 2em;
+  color:rgba(170, 115, 84, 1);
+  letter-spacing: 1px;
 }
 
 .advantages__item:nth-of-type(2n)  .text__block {
   flex: 0 1 70%;
   text-align: start;
+  color:rgba(255, 255, 255, 1);
 }
 
 
@@ -862,7 +923,7 @@ rgba(255, 249, 239, 1) */
 
 
 
-
+/*______________________________________________*/
 
 
 
@@ -1367,7 +1428,7 @@ flex-wrap: wrap;
 }
 
 
-.service__title__container{
+.service__title__box{
   flex: 0 0 100%;
   display: flex;
   align-items:center;
@@ -1378,7 +1439,7 @@ flex-wrap: wrap;
   border-radius:5px/5px;
 }
 
-.service__title__container svg{
+.service__title__box svg{
   max-height: 100px;
 }
 .service__title{

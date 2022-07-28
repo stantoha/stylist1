@@ -134,7 +134,7 @@ console.log(tabsContent);
                                         hideServiceTabContent();
                                         showServiceTabContent(j);
 
-                                        /* serviceTitles.forEach(item => {
+                                        serviceTitles.forEach(item => {
                                             if (serviceTitles[j].classList.contains('right__slide')) {
                                                 setTimeout(() => {
                                                     serviceTitles[j].classList.remove('right__slide');
@@ -144,7 +144,7 @@ console.log(tabsContent);
                                                     serviceTitles[j].classList.remove('left__slide');
                                                 }, 1000);
                                             }
-                                        }); */
+                                        });
 
                                     }
                                 });
