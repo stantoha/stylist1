@@ -524,9 +524,10 @@ a:hover.service__button{
   height: auto;
   margin: 5px;
   margin-bottom: 50px;
+  gap: 15px;
 }
 .service__component {
-  flex: 1 1 100%;
+  flex: 1 1 95%;
   font-size: 1.4em;
   font-weight: 500;
   letter-spacing: 1px;
@@ -535,9 +536,11 @@ a:hover.service__button{
   font-family: 'Noto Sans', sans-serif;
   max-height: 80px;
   padding: 10px;
-  margin: 10px auto;
+  margin: 10px 0 0 5% ;
+  list-style: circle;
 }
 .service__components__list__title {
+  flex: 1 1 100%;
   font-weight: 500;
   letter-spacing: 2px;
   font-size: 2em;
@@ -609,15 +612,14 @@ rgba(255, 249, 239, 1) */
 
 
 .additional__services__list {
+  flex: 1 1 auto;
   display: flex;
   list-style: circle;
   align-items:center;
   flex-wrap: wrap;
   gap: 25px;
-  width: 100%;
   height: auto;
-  
-  margin-bottom: 50px;
+
 }
 
 .additional__services__list__title{
@@ -629,14 +631,11 @@ rgba(255, 249, 239, 1) */
   color: rgba(255, 255, 255, 1);
   font-family: 'Tenor Sans', sans-serif;
   background-color:rgba(0, 0, 0, 0.2);
-/*   text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
- */  padding:10px 25px;
-  margin: 0 auto;
+  padding:10px 25px;
 }
 .additional__services__item {
   flex:0 1 30%;
   border-radius:15px/15px;
-margin: 0 auto;
   text-align: center;
   min-height: 200px;
   padding: 5px;
@@ -656,9 +655,13 @@ margin: 0 auto;
   padding:10px ;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
 }
+.additional__service__title:nth-of-type(2n)  {
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 1px 1px 1px rgba(231, 161, 125, 1);
+}
 .additional__service__descr {
-  text-align:start;
-  font-size: 1em;
+  text-align: center;
+  font-size: 1.3em;
   line-height: 1.5;
   color: rgba(0,0,0,0.9);
   padding:20px 30px;
