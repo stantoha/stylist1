@@ -377,6 +377,7 @@ line-height: 1.3;
 
 
 .section__body {
+  flex: 1 1 auto;
   position: relative;
 }
 .body-section{
