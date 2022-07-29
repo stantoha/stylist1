@@ -518,6 +518,7 @@ line-height: 1.3;
 
 .service {
   flex: 1 1 auto;
+  max-width: 100vw;
 }
 
 .service__1 {
@@ -549,6 +550,7 @@ line-height: 1.3;
 
 
 .services__list {
+  max-width: 100vw;
   display: flex;
   align-items:baseline;
 gap: 10px;
