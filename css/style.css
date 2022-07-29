@@ -897,7 +897,7 @@ rgba(255, 249, 239, 1) */
   height: 100px;
 }
 .advantages__item .text__block {
-  flex: 0 1 70%;
+  flex: 1 1 auto;
   text-align: end;
   font-size: 2em;
   color:rgba(170, 115, 84, 1);
@@ -905,7 +905,6 @@ rgba(255, 249, 239, 1) */
 }
 
 .advantages__item:nth-of-type(2n)  .text__block {
-  flex: 0 1 70%;
   text-align: start;
   color:rgba(255, 255, 255, 1);
 }
