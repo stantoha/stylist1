@@ -895,7 +895,9 @@ rgba(255, 249, 239, 1) */
 }
 
 .travel {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 150px;
   height: 50px;
 }
@@ -903,10 +905,10 @@ rgba(255, 249, 239, 1) */
 
 @keyframes plane {
   0% {
-    transform: translate(-70vw, 5vw) scale(0.01);
+    transform: translate(-70vw, -5vw) scale(0.01);
   }
   100% {
-    transform: translate(55vw, -7.5vw) scale(0.11);
+    transform: translate(55vw, -17.5vw) scale(0.11);
   }
 }
 
@@ -918,11 +920,11 @@ rgba(255, 249, 239, 1) */
   letter-spacing: 1px ;
   color:rgba(231, 161, 125, 1);
   font-weight: 700;
-  padding: 20px;
+  padding: 10px;
 }
 .fashion__tours__list img{
-  max-width: 480px;
-  margin: 20px auto;
+  max-width: 700px;
+  margin: 10px auto;
 }
 
 
