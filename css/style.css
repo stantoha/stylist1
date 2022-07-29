@@ -523,20 +523,9 @@ line-height: 1.3;
 
 .service__1 {
 }
-.service__title__box {
-  display: flex;
-  justify-content: space-around;
-  align-items:center;
-  height: 70px;
-  max-width: 100vw;
-}
-
-.service__icon{
-  padding: 10px;
-  height: 50px;
-}
 
 .service__title {
+  text-align: center;
   font-weight: 700;
   padding: 5px;
   font-style: italic;
