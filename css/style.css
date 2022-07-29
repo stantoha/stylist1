@@ -910,7 +910,20 @@ rgba(255, 249, 239, 1) */
   }
 }
 
-
+.fashion__tours__list .title-section{
+  flex-direction: column;
+}
+.fashion__tour__title{
+  font-size: 1.9em;
+  letter-spacing: 1px ;
+  color:rgba(231, 161, 125, 1);
+  font-weight: 700;
+  padding: 20px;
+}
+.fashion__tours__list img{
+  max-width: 480px;
+  margin: 20px auto;
+}
 
 
 
