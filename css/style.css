@@ -912,24 +912,98 @@ rgba(255, 249, 239, 1) */
   }
 }
 
-.fashion__tours__list .title-section{
+
+.fashion__tours__list {
+ 
+}
+.fashion__tour__item {
+  display: flex;
+  align-items:center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.tour__title {
+  flex: 1 1 auto;
+  display: flex;
   flex-direction: column;
+  align-items:center;
+  align-content:space-around;
+  text-align: center;
 }
-.fashion__tour__title{
-  font-size: 1.9em;
-  letter-spacing: 1px ;
+.fashion__tour__title {
+  flex: 1 1 auto;
+  font-size: 2em;
+  font-family: 'Tenor Sans', sans-serif;
+  letter-spacing: 1px;
   color:rgba(231, 161, 125, 1);
-  font-weight: 700;
-  padding: 10px;
+  text-shadow:0 0 2px rgba(0, 0, 0, 0.7);
+  margin: 20px 0;
 }
-.fashion__tours__list img{
-  max-width: 700px;
-  margin: 10px auto;
+.title__image {
+  padding: 20px ;
+  flex: 1 1 auto;
+}
+.tour__title img{
+  max-width: 800px;
+}
+.fashion__tour__descr {
+  flex: 1 1 auto;
+  background-color:rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+}
+.text__block {
+}
+.fashion__tour__program {
+  flex: 1 1 auto;
+}
+.day__descr {
+  display: flex;
+  align-items:center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.day__number {
+  text-align: center;
+  flex: 0 0 100%;
+  font-size: 1.5em;
+  font-weight: 600;
+  color:rgba(231, 161, 125, 1);
+  margin: 20px 0;
+}
+.day__descr .text__block {
+  flex: 1 1 50%;
+  padding: 30px;
+  font-size: 2em;
+}
+.day__descr__img{
+  flex: 1 1 50%;
+  padding: 30px;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
 }
 
-
-
+.day__descr img{
+  max-width: 600px;
+}
+@media (max-width:991.98px){
+  .title__image {
+    padding: 20px 0;
+  }
+  .day__descr .text__block {
+    flex: 1 1 auto;
+    padding: 20px ;
+  }
+  .day__descr__img{
+    flex: 1 1 auto;
+    padding: 20px;
+    height: auto;
+    text-align: center;
+  }
+}
 /*______________________________________________*/
+
+
 
 
 .advantages {
