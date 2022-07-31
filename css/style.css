@@ -457,17 +457,18 @@ line-height: 1.3;
   color: rgba(255, 255, 255, 1);
   font-family: 'Tenor Sans', sans-serif;
   background-color:rgba(231, 161, 125, 1);
-  padding: 25px;
+  padding: 30px;
 }
 
 .section__image {
   flex: 1 1 50%;
   padding: 30px;
   text-align: center;
+  /* border:2px solid rgba(231, 161, 125, 1); */
 }
 
-.section__image img{
-  max-width: 400px;
+img.section__image {
+  max-width: 550px;
   margin: 0 auto;
 }
 
@@ -968,7 +969,7 @@ rgba(255, 249, 239, 1) */
   text-shadow: 1px 1px 1px rgba(231, 161, 125, 1);
 }
 .day__descr .text__block{
-  flex:0 1 60%;
+  flex:0 1 45%;
   padding: 30px;
   margin: 20px auto;
 }
@@ -976,7 +977,7 @@ rgba(255, 249, 239, 1) */
   flex: 1 1 auto;
   padding: 30px;
   height: auto;
-  max-width: 420px;
+  max-width: 500px;
   margin: 20px auto;
 }
 
