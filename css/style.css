@@ -115,10 +115,10 @@ body{
 /*______________________________________________*/
 
 
-.header__logo {
+/* .header__logo {
   flex: 0 0 auto;
   z-index: 5;
-}
+} */
 
 .header__logo__icon{
   flex: 0 0 auto;
