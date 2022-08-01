@@ -15,12 +15,10 @@ window.addEventListener('DOMContentLoaded', () => {
         upButton = document.querySelector('.up__button'),
         sectionTitles = document.querySelectorAll('.section__title'),
         serviceTitles = document.querySelectorAll('.service__title'),
-        subTitle = document.querySelector('.sub__title');
-
-
-        console.log(tabs);
-
-console.log(tabsContent);
+        subTitle = document.querySelector('.sub__title'),
+        modal = document.querySelector('.modal__container'),
+        modalTrigger = document.querySelectorAll('[data-modal]'),
+        modalClosebtn = document.querySelector('[data-close]');
 
 
 
@@ -48,7 +46,7 @@ console.log(tabsContent);
 
 
     
-    /* upButton.classList.add('hide'); */
+    upButton.classList.add('hide');
 
     setTimeout(() => {
         title.classList.remove('top__slide');
@@ -135,13 +133,13 @@ console.log(tabsContent);
                                         showServiceTabContent(j);
 
                                         serviceTitles.forEach(item => {
-                                            if (serviceTitles[j].classList.contains('right__slide')) {
+                                            if (item[j].classList.contains('right__slide')) {
                                                 setTimeout(() => {
-                                                    serviceTitles[j].classList.remove('right__slide');
+                                                    item[j].classList.remove('right__slide');
                                                 }, 1000);
-                                            } else if (serviceTitles[j].classList.contains('left__slide')) {
+                                            } else if (item[j].classList.contains('left__slide')) {
                                                 setTimeout(() => {
-                                                    serviceTitles[j].classList.remove('left__slide');
+                                                    item[j].classList.remove('left__slide');
                                                 }, 1000);
                                             }
                                         });
@@ -157,7 +155,80 @@ console.log(tabsContent);
     });
 
 
+    //UPBUTTON
 
+    window.onscroll = function () {
+        if (window.pageYOffset > 300) {
+            subTitle.classList.remove('show', 'fade');
+            subTitle.classList.add('hide');
+            servicesTabParent.classList.add('to__the__top');
+            title.classList.add('top__slide');
+            header.classList.add('top__slide');
+            upButton.classList.remove('hide');
+            upButton.classList.add('show', 'fade');
+        } else {
+            subTitle.classList.add('show', 'fade');
+            subTitle.classList.remove('hide');
+            servicesTabParent.classList.remove('to__the__top');
+
+            title.classList.remove('top__slide');
+            header.classList.remove('top__slide');
+            upButton.classList.add('hide');
+            upButton.classList.remove('show', 'fade');
+        }
+    };
+
+    upButton.addEventListener('click', () => {
+        window.scrollTo(0, 0);
+    });
+
+
+
+    //MODAL
+
+    function openModal() {
+        modal.classList.add('show', 'fade'); 
+        modal.classList.remove('hide');
+        document.body.style.overflow = 'hidden';
+        clearInterval(modalTimerId);
+    }
+
+    modalTrigger.forEach(btn => {
+        btn.addEventListener('click', openModal);
+    });
+
+    function closeModal() {
+        modal.classList.remove('show', 'fade'); 
+        modal.classList.add('hide');
+        document.body.style.overflow = '';
+    }
+
+    modalClosebtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.code === "Escape" && modal.classList.contains('show')) {
+            closeModal();
+        }
+    });
+
+    const modalTimerId = setTimeout(openModal, 30000);
+
+
+
+    function showModalByScroll() {
+        if (window.pageYOffset + document.documentElement.clientHeight > document.documentElement.scrollHeight) {
+            openModal();
+            window.removeEventListener('scroll', showModalByScroll);
+        }
+    }
+
+    window.addEventListener('scroll', showModalByScroll);
 
 
 });
