@@ -487,7 +487,7 @@ line-height: 1.3;
   /* border:2px solid rgba(231, 161, 125, 1); */
 }
 
-.section__image img{
+img.section__image {
   max-width: 450px;
   /* margin: 0 auto; */
 }
@@ -1338,6 +1338,7 @@ img.title__image{
 
 .CTA{
   flex: 1 1 auto;
+  max-width: 80%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1421,7 +1422,7 @@ button.CTA__button,
 
 textarea.message{
   border:2px solid rgba(231, 161, 125, 1);
-  min-width: 60%;
+  max-width: 90%;
   font-size: 2em;
   height: auto;
 }
