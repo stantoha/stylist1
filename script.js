@@ -22,6 +22,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
+        function hideServiceTitles(){
+            serviceTitles.forEach((item,i)=>{
+                if(i%2==0 || i===0){
+                    item.classList.add('right__slide');
+                }
+                else{
+                    item.classList.add('left__slide');
+                }
+            });
+        }
+        
+       
+
         function showNavMenu(){
             navMenu.classList.remove('header__nav__menu');
             navMenu.classList.add('header__nav__menu__visible');
@@ -117,7 +130,9 @@ window.addEventListener('DOMContentLoaded', () => {
                         hideNavMenu();
                     }
                     
-                     if (i == 1) {
+                     if (i === 1) {
+
+                        hideServiceTitles();
                         setTimeout(() => {
                             serviceTitles[0].classList.remove('right__slide');
                         }, 1000);
@@ -133,13 +148,13 @@ window.addEventListener('DOMContentLoaded', () => {
                                         showServiceTabContent(j);
 
                                         serviceTitles.forEach(item => {
-                                            if (item[j].classList.contains('right__slide')) {
+                                            if (serviceTitles[j].classList.contains('right__slide')) {
                                                 setTimeout(() => {
-                                                    item[j].classList.remove('right__slide');
+                                                    serviceTitles[j].classList.remove('right__slide');
                                                 }, 1000);
-                                            } else if (item[j].classList.contains('left__slide')) {
+                                            } else if (serviceTitles[j].classList.contains('left__slide')) {
                                                 setTimeout(() => {
-                                                    item[j].classList.remove('left__slide');
+                                                    serviceTitles[j].classList.remove('left__slide');
                                                 }, 1000);
                                             }
                                         });
@@ -182,7 +197,7 @@ window.addEventListener('DOMContentLoaded', () => {
         window.scrollTo(0, 0);
     });
 
-
+/* 
 
     //MODAL
 
@@ -228,7 +243,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    window.addEventListener('scroll', showModalByScroll);
+    window.addEventListener('scroll', showModalByScroll); */
 
 
 });
