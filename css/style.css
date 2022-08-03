@@ -109,7 +109,7 @@ body{
   height: 70px;
   align-items: center;
   text-align: center;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+ /*  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2); */
   column-gap: 25px;
 }
 
@@ -141,7 +141,7 @@ body{
   text-align: center;
   color: rgba(255, 255, 255, 1);
   font-family: 'Tenor Sans', sans-serif;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   transition-duration: 0.5s;
 }
 .sub__title {
