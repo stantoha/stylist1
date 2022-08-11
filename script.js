@@ -138,19 +138,8 @@ window.addEventListener("DOMContentLoaded", () => {
                   hideServiceTabContent();
                   showServiceTabContent(j);
 
-                  serviceTitles.forEach((item) => {
-                    if (serviceTitles[j].classList.contains("right__slide")) {
-                      setTimeout(() => {
-                        serviceTitles[j].classList.remove("right__slide");
-                      }, 1000);
-                    } else if (
-                      serviceTitles[j].classList.contains("left__slide")
-                    ) {
-                      setTimeout(() => {
-                        serviceTitles[j].classList.remove("left__slide");
-                      }, 1000);
-                    }
-                  });
+                  showTitles(serviceTitles,i);
+
                 }
               });
             }
@@ -173,19 +162,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     hideServiceTabContent();
                     showServiceTabContent(j);
 
-                    serviceTitles.forEach((item) => {
-                      if (serviceTitles[j].classList.contains("right__slide")) {
-                        setTimeout(() => {
-                          serviceTitles[j].classList.remove("right__slide");
-                        }, 1000);
-                      } else if (
-                        serviceTitles[j].classList.contains("left__slide")
-                      ) {
-                        setTimeout(() => {
-                          serviceTitles[j].classList.remove("left__slide");
-                        }, 1000);
-                      }
-                    });
+                    showTitles(serviceTitles,j);
                   }
                 });
               }
@@ -225,7 +202,7 @@ window.addEventListener("DOMContentLoaded", () => {
   //UPBUTTON
 
   window.onscroll = function () {
-    if (window.pageYOffset > 300) {
+    if (window.pageYOffset > 200) {
       subTitle.classList.remove("show", "fade");
       subTitle.classList.add("hide");
       servicesTabParent.classList.add("to__the__top");
