@@ -30,6 +30,17 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+  function showTitles(item,i){
+    if (item[i].classList.contains("right__slide")) {
+      setTimeout(() => {
+        item[i].classList.remove("right__slide");
+      }, 1000);
+    } else if (item[i].classList.contains("left__slide")) {
+      setTimeout(() => {
+        item[i].classList.remove("left__slide");
+      }, 1000);
+    }
+  }
 
   function showNavMenu() {
     navMenu.classList.remove("header__nav__menu");
@@ -59,6 +70,10 @@ window.addEventListener("DOMContentLoaded", () => {
     subTitle.classList.add("show", "fade");
   }, 1000);
 
+
+
+
+
   function hideTabContent() {
     tabsContent.forEach((item) => {
       item.classList.add("hide");
@@ -68,21 +83,15 @@ window.addEventListener("DOMContentLoaded", () => {
       item.classList.remove("active");
     });
   }
+  
 
   function showTabContent(i = 0) {
     tabsContent[i].classList.add("show", "fade");
     tabsContent[i].classList.remove("hide");
     tabs[i].classList.add("active");
 
-    if (sectionTitles[i].classList.contains("right__slide")) {
-      setTimeout(() => {
-        sectionTitles[i].classList.remove("right__slide");
-      }, 1000);
-    } else if (sectionTitles[i].classList.contains("left__slide")) {
-      setTimeout(() => {
-        sectionTitles[i].classList.remove("left__slide");
-      }, 1000);
-    }
+    showTitles(sectionTitles,i);
+    
   }
 
   hideTabContent();
