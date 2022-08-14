@@ -173,31 +173,6 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* contactsServicesTabParent.addEventListener('click', (event) => {
-        let target = event.target;
-        if (target && target.classList.contains('contacts__service__link')) {
-            
-            serviceTabs.forEach((item, j) => {
-                if (target == item) {
-                    hideServiceTabContent();
-                    showServiceTabContent(j);
-
-                    serviceTitles.forEach(item => {
-                        if (serviceTitles[j].classList.contains('right__slide')) {
-                            setTimeout(() => {
-                                serviceTitles[j].classList.remove('right__slide');
-                            }, 1000);
-                        } else if (serviceTitles[j].classList.contains('left__slide')) {
-                            setTimeout(() => {
-                                serviceTitles[j].classList.remove('left__slide');
-                            }, 1000);
-                        }
-                    });
-
-                }
-            });
-        }
-    }); */
 
   //UPBUTTON
 
@@ -210,11 +185,11 @@ window.addEventListener("DOMContentLoaded", () => {
       header.classList.add("top__slide");
       upButton.classList.remove("hide");
       upButton.classList.add("show", "fade");
-    } else {
+    }
+     else {
       subTitle.classList.add("show", "fade");
       subTitle.classList.remove("hide");
       servicesTabParent.classList.remove("to__the__top");
-
       title.classList.remove("top__slide");
       header.classList.remove("top__slide");
       upButton.classList.add("hide");
