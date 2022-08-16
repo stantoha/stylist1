@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
     contactsServiceTabs = document.querySelectorAll(".contacts__service__link"),
     contactsServicesTabParent = document.querySelector(".contacts__services__list"),
     upButton = document.querySelector(".up__button"),
-    modal = document.querySelector(".modal__container"),
+    modal = document.querySelector(".modal__box"),
     modalTrigger = document.querySelectorAll("[data-modal]"),
     modalClosebtn = document.querySelector("[data-close]");
 
@@ -25,11 +25,12 @@ window.addEventListener("DOMContentLoaded", () => {
     serviceTitles.forEach((item, i) => {
       if (i % 2 == 0 || i === 0) {
         item.classList.add("right__slide");
-      } else {
+      } else if (i % 2 !== 0) {
         item.classList.add("left__slide");
       }
     });
   }
+  hideServiceTitles();
   function showTitles(item,i){
     if (item[i].classList.contains("right__slide")) {
       setTimeout(() => {
@@ -63,15 +64,12 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   upButton.classList.add("hide");
-
+  closeModal();
   setTimeout(() => {
     title.classList.remove("top__slide");
     subTitle.classList.remove("hide");
     subTitle.classList.add("show", "fade");
   }, 1000);
-
-
-
 
 
   function hideTabContent() {
@@ -124,7 +122,7 @@ window.addEventListener("DOMContentLoaded", () => {
           window.scrollTo(0, 0);
           hideTabContent();
           showTabContent(i);
-
+          hideServiceTitles();
           contactsServicesTabParent.addEventListener("click", (event) => {
             let target = event.target;
             if (
@@ -137,9 +135,8 @@ window.addEventListener("DOMContentLoaded", () => {
                 if (target == item) {
                   hideServiceTabContent();
                   showServiceTabContent(j);
-
+                  hideServiceTitles();
                   showTitles(serviceTitles,i);
-
                 }
               });
             }
@@ -185,6 +182,7 @@ window.addEventListener("DOMContentLoaded", () => {
       header.classList.add("top__slide");
       upButton.classList.remove("hide");
       upButton.classList.add("show", "fade");
+      servicesTabParent.classList.add('header__services__list');
     }
      else {
       subTitle.classList.add("show", "fade");
@@ -194,6 +192,7 @@ window.addEventListener("DOMContentLoaded", () => {
       header.classList.remove("top__slide");
       upButton.classList.add("hide");
       upButton.classList.remove("show", "fade");
+      servicesTabParent.classList.remove('header__services__list');
     }
   };
 
@@ -201,7 +200,7 @@ window.addEventListener("DOMContentLoaded", () => {
     window.scrollTo(0, 0);
   });
 
-  /* 
+  
 
     //MODAL
 
@@ -224,19 +223,19 @@ window.addEventListener("DOMContentLoaded", () => {
 
     modalClosebtn.addEventListener('click', closeModal);
 
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
             closeModal();
         }
     });
 
-    document.addEventListener('keydown', (e) => {
-        if (e.code === "Escape" && modal.classList.contains('show')) {
+    document.addEventListener('keydown', (event) => {
+        if (event.code === "Escape" && modal.classList.contains('show')) {
             closeModal();
         }
     });
 
-    const modalTimerId = setTimeout(openModal, 30000);
+    const modalTimerId = setTimeout(openModal, 10000);
 
 
 
@@ -247,5 +246,5 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    window.addEventListener('scroll', showModalByScroll); */
+    window.addEventListener('scroll', showModalByScroll);
 });
