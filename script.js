@@ -19,7 +19,20 @@ window.addEventListener("DOMContentLoaded", () => {
     upButton = document.querySelector(".up__button"),
     modal = document.querySelector(".modal__box"),
     modalTrigger = document.querySelectorAll("[data-modal]"),
-    modalClosebtn = document.querySelector("[data-close]");
+    modalClosebtn = document.querySelector("[data-close]"),
+    servicesIcons=["img/icons/0.png","img/icons/1.png","img/icons/2.png",
+    "img/icons/3.png","img/icons/4.png","img/icons/5.png"];
+
+
+    let serviceTitleIcons=document.querySelectorAll('.service__title__icon');
+    serviceTitleIcons.forEach((item,i)=>{
+      item.style.cssText=`
+      background-image:url("${servicesIcons[i]}") no-repeat;
+      background-size:cover;
+      z-index:500;`;
+    });
+
+console.log(serviceTitleIcons);
 
   function hideServiceTitles() {
     serviceTitles.forEach((item, i) => {
@@ -31,12 +44,14 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
   hideServiceTitles();
+
   function showTitles(item,i){
     if (item[i].classList.contains("right__slide")) {
       setTimeout(() => {
         item[i].classList.remove("right__slide");
       }, 1000);
-    } else if (item[i].classList.contains("left__slide")) {
+    } 
+    else if (item[i].classList.contains("left__slide")) {
       setTimeout(() => {
         item[i].classList.remove("left__slide");
       }, 1000);
